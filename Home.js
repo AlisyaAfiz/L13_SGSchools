@@ -54,7 +54,7 @@ const Home = ({navigation}) => {
             })
             .then((myJson)=>{
                 if(originalData.length<1) {
-                    let result = myJson;
+                    let result = myJson.result;
                     let records = result.records;
                     setMydata(records);
                 }
