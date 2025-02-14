@@ -57,6 +57,7 @@ const Home = ({navigation}) => {
                     let result = myJson.result;
                     let records = result.records;
                     setMydata(records);
+                    originalData = records;
                 }
             })
     }, []);
@@ -116,7 +117,7 @@ const Home = ({navigation}) => {
                     <Picker.Item label="Z - A" value="z-a" />
                 </Picker>
             </View>
-            <FlatList data={mydata} renderItem={renderItem} style={{marginBottom: 200}}/>
+            <FlatList data={mydata} renderItem={renderItem} style={{paddingBottom: 500}}/>
         </View>
     );
 }
